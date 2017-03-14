@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>All done</title>
+</head>
+<body>
+	<h1 th:inline="text">Hi, [[${display_name}]]!</h1>
+	<img th:unless="${#strings.isEmpty(thumbnail)}" th:src="${thumbnail}" />
+	<a
+		th:href="@{/launch/{organizationId}(organizationId=${organizationId})}">Launch
+		integration</a>
+</body>
+</html>

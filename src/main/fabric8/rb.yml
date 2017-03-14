@@ -1,0 +1,9 @@
+kind: RoleBinding
+metadata:
+  name: rolebinding-salesforce-oauth-webapp-admin
+roleRef:
+  kind: Role
+  name: admin
+subjects:
+- kind: ServiceAccount
+  name: salesforce-oauth-webapp

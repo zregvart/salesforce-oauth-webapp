@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Route
+spec:
+  to:
+    kind: Service
+    name: salesforce-oauth-webapp
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
